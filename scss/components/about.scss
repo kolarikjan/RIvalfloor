@@ -1,0 +1,36 @@
+.about {
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+    &-text {
+        max-width: 85%;
+        p {
+            color: var(--paragraph-color);
+            font-size: 18px;
+            line-height: 33px;
+            font-weight: 500;
+        }
+        @include media("md") {
+            text-align: center;
+            max-width: 100%;
+        }
+    }
+    &-image { 
+        background-image: url("../img/section-about-background2.png"), url("../img/section-about-background1.png");
+        background-repeat: no-repeat, no-repeat;
+        background-position: left bottom, right top;
+        background-size: auto, 78%;
+        @include widthFit();
+        margin: auto;
+        img {
+            max-width: 525px;
+            display: block;
+            margin: 0 auto;
+            padding: 2rem;
+            @include media("lg") {
+                margin-top: 3rem;
+                max-width: 100%;
+            }
+        }
+    }
+}

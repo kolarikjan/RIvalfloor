@@ -1,0 +1,37 @@
+.numbers {
+    &-row {
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    &-col {
+        background-color: var(--background-color);
+        padding: 2rem;
+        border-radius: 10px;
+        aspect-ratio: 1/1;
+        @include flexCenterDir(column);
+        -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.03);
+        -moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.03);
+        box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.03);
+        &-number {
+            color: var(--highlight-color);
+            font-size: 60px;
+            line-height: 80px;
+            font-weight: 700;
+        }
+        &-text {
+            color: var(--primary-color);
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    @include min-media("xxl") {
+        .row {
+            margin: 0 -25px;
+        }
+        .row > div {
+            padding: 0 25px;
+        }
+    }
+}

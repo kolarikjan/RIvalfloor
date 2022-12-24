@@ -1,0 +1,44 @@
+.button-white {
+    @include flexCenter();
+    border-radius: var(--button-radius);
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0.7rem 1.5rem;
+    @include widthFit();
+    &:hover {
+        background-color: var(--secondary-color);
+        color: var(--highlight-color);
+        text-decoration: none;
+        svg path {
+            fill: var(--highlight-color);
+        }
+    }
+    svg {
+        margin-left: 1rem;
+    }
+}
+.button-higlighted {
+    @include flexCenter();
+    border-radius: var(--button-radius);
+    border: 2px solid var(--highlight-color);
+    color: var(--secondary-color);
+    background-color: var(--highlight-color);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0.7rem 1.5rem;
+    @include widthFit();
+    &:hover {
+        background-color: var(--secondary-color);
+        color: var(--highlight-color);
+        text-decoration: none;
+        svg path {
+            fill: var(--highlight-color);
+        }
+    }
+    svg {
+        margin-left: 1rem;
+    }
+}

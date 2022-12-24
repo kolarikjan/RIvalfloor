@@ -1,0 +1,17 @@
+.numbers-row {
+  max-width: 85%;
+  margin: 0 auto;
+}
+.numbers-col {
+  background-color: var(--background-color);
+  padding: 2rem;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  display: flex;
+}
+.numbers-col-number {
+  color: var(--highlight-color);
+  font-size: 60px;
+  line-height: 80px;
+  font-weight: 700;
+}/*# sourceMappingURL=numbers.css.map */
