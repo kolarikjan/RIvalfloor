@@ -17,17 +17,10 @@
     --footer-icon-color: #808080;
     --copyright-color: #a2a2a2;
     --border-radius: 10px;
-    --font: 'Outfit', sans-serif;
+    --font: "Outfit", sans-serif;
     --button-radius: 25px;
     --banner-background: url("../img/section-banner-background.png");
     --footer-background: url("../img/section-footer-background.png");
     --foter-radius: 20px;
 }
-
-$breaks: (
-    "sm": 576px,
-    "md": 768px,
-    "lg": 993px,
-    "xl": 1200px,
-    "xxl": 1600px,
-);
+  

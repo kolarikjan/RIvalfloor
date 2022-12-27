@@ -22,11 +22,16 @@
         background-size: auto, 78%;
         @include widthFit();
         margin: auto;
+        transition: 0.25s;
+        &:hover {
+            background-position: left 1rem bottom 1rem, right 1rem top 1rem;
+        }
         img {
             max-width: 525px;
             display: block;
             margin: 0 auto;
             padding: 2rem;
+            border-radius: calc(var(--border-radius) * 4 );
             @include media("lg") {
                 margin-top: 3rem;
                 max-width: 100%;

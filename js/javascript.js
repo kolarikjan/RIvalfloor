@@ -1,3 +1,44 @@
+
+const checkVisible = (elm) => {
+
+    var rect = elm.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+
+}
+
+const numbersAnimation = () => {
+    
+    const counters = document.querySelectorAll('.numbers-col-number');
+    let speed = 500;
+
+    counters.forEach( counter => {
+    const animate = () => {
+        const value = +counter.getAttribute('data-value');
+        if (value < 100) {
+            speed = 500;
+        } else if (value < 200) {
+            speed = 75;
+        } else {
+            speed = 50;
+        }
+        const data = +counter.innerText;
+        
+        const time = value / speed;
+        if(data < value) {
+            counter.innerText = Math.ceil(data + time);
+            setTimeout(animate, 20);
+            }
+            else{
+            counter.innerText = value;
+            }
+        }
+        
+        animate();
+
+    });
+}
+
 $(document).ready(function () {
     
     Fancybox.bind("[data-fancybox]", {});
@@ -18,12 +59,28 @@ $(document).ready(function () {
 
     $('.banner-homepage').owlCarousel({
         items:1,
-        loop:false,
+        loop:true,
         rewind:true,
         navText:["<img src='img/arrow-banner.png' alt='slider arrow' class='banner-prev'>","<img src='img/arrow-banner.png' alt='slider arrow' class='banner-next'>"],
         margin:1,
         nav:true,
-        dots:false
+        dots:true
+    });
+
+    document.querySelector('.navbar-toggler').addEventListener('click', function () {
+
+        document.querySelector('.animated-icon').classList.toggle('open');
+
     });
 
 });
+var run = false;
+$(window).scroll(function () { 
+    if (checkVisible(document.querySelector('.numbers-col-text')) && !run) {
+        run = true;
+        setTimeout(function(){
+        numbersAnimation();
+        }, );
+    }
+});
+

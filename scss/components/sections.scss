@@ -50,4 +50,14 @@
             margin-bottom: 2rem;
         }
     }
+    &-footer {
+        margin-top: 3.75rem;
+        @include flexCenter();
+        @include media("lg") {
+            margin-top: 2.5rem;
+        }
+        @include media("md") {
+            margin-top: 2rem;
+        }
+    }
 }

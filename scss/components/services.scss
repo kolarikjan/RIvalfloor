@@ -1,13 +1,20 @@
 .services {
     margin-bottom: -24px;
+    padding-bottom: 3rem !important;
+    @include media("md") {
+        padding-bottom: 1.5rem !important;
+    }
     &-box {
         margin-bottom: 24px;
         background-color: var(--services-boxes-color);
         padding: 4rem 3.5rem 3.5rem;
-        border-radius: 10px;
+        border-radius: var(--border-radius);
         @include flexCenterDir(column);
         justify-content: space-between;
         height: calc(100% - 24px);
+        &:hover &-icon svg {
+            animation: shake 1300ms;
+        }
         @include media("lg") {
             padding: 4rem 3.5rem;
         }
@@ -27,6 +34,7 @@
             display: block;
             text-align: center;
             margin: 1.75rem 0 1.25rem;
+            transition: 0.15s;
             &:hover {
                 color: var(--highlight-color);
                 text-decoration: none;
@@ -51,8 +59,12 @@
             align-items: center;
             &:hover {
                 text-decoration: none;
+                svg {
+                    margin-left: .75rem;
+                }
             }
             svg {
+                transition: 0.25s;
                 margin-left: .5rem;
             }
         }
