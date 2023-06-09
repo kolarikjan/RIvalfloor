@@ -145,3 +145,27 @@
         }
     }
 }
+.banner-subpage {
+    background-image: url("../img/section-subBanner-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7rem 0 4rem;
+    h1 {
+        color: var(--secondary-color);
+        font-size: 60px;
+        margin-bottom: 2rem;
+        @include media("lg") {
+            margin-bottom: 0rem;
+        }
+        @include media("sm") {
+            font-size: 45px;
+            line-height: 50px;
+        }
+    }
+    @include media("lg") {
+        padding: 5rem 0;
+    }
+    @include media("sm") {
+        padding: 3rem 0;
+    }
+}
