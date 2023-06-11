@@ -62,7 +62,7 @@
                 @include flexCenterDir(column);
                 text-align: center;
             }
-            &:hover .footer-icons-image {
+            &:hover .footer-icons-image:not(.noborder) {
                 background-color: var(--footer-icon-color);
                 svg path {
                     fill: var(--background-color);
@@ -78,6 +78,15 @@
             height: 65px;
             transition: all 0.15s cubic-bezier(0, 0, 0, 0.68);
             @include flexCenter();
+            &.noborder {
+                width: auto;
+                height: auto;
+                border: 0 !important;
+                align-items: flex-start;
+                svg {
+                    margin-top: 1.25rem;
+                }
+            }
             @include media("md") {
                 margin-right: 0;
             }

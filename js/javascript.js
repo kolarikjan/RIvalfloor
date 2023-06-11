@@ -67,6 +67,26 @@ $(document).ready(function () {
         dots:true
     });
 
+    $('.section-block-textimage').owlCarousel({
+        items:1,
+        loop:true,
+        rewind:true,
+        navText:["<img src='img/arrow-dropdown-black.png' alt='slider arrow' class='section-block-textimage-prev'>","<img src='img/arrow-dropdown-black.png' alt='slider arrow' class='section-block-textimage-next'>"],
+        margin:1,
+        nav:true,
+        dots:true
+    });
+
+    $('.section-block-gallery').owlCarousel({
+        items:1,
+        loop:true,
+        rewind:true,
+        navText:["<img src='img/arrow-dropdown-black.png' alt='slider arrow' class='section-block-textimage-prev'>","<img src='img/arrow-dropdown-black.png' alt='slider arrow' class='section-block-textimage-next'>"],
+        margin:24,
+        nav:true,
+        dots:true
+    });
+
     document.querySelector('.navbar-toggler').addEventListener('click', function () {
 
         document.querySelector('.animated-icon').classList.toggle('open');

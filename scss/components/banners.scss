@@ -168,4 +168,7 @@
     @include media("sm") {
         padding: 3rem 0;
     }
+    @include media("md") {
+        text-align: center;
+    }
 }
