@@ -1,17 +1,14 @@
 .services {
-    margin-bottom: -24px;
+    margin-bottom: -1.4rem;
     padding-bottom: 3rem !important;
-    @include media("md") {
-        padding-bottom: 1.5rem !important;
-    }
     &-box {
-        margin-bottom: 24px;
+        margin-bottom: 1.4rem;
         background-color: var(--services-boxes-color);
         padding: 4rem 3.5rem 3.5rem;
         border-radius: var(--border-radius);
         @include flexCenterDir(column);
         justify-content: space-between;
-        height: calc(100% - 24px);
+        height: calc(100% - 1.4rem);
         &:hover &-icon svg {
             animation: shake 1300ms;
         }
@@ -76,5 +73,21 @@
         .row > div {
             padding: 0 25px;
         }
+    }
+    @include media("md") {
+        padding-bottom: 1.5rem !important;
+        .row {
+            margin-left: -7px;
+            margin-right: -7px;
+            & > div {
+                padding-left: 7px;
+                padding-right: 7px;
+            }
+        }
+        &-box {
+            height: calc(100% - 0.88rem);
+            margin-bottom: 0.88rem;
+        }
+        margin-bottom: -0.88rem;
     }
 }

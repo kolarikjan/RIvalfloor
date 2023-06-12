@@ -167,30 +167,22 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="section-form-box mb-0">
-                                        <label for="">
+                                    <div class="section-form-box">
+                                        <label class="section-form-checkbox">
                                             <input type="checkbox">
+                                            <span class="section-form-checkbox-checkmark"></span>
                                             checkbox neaktivní
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mb-2">
                                 <div class="col-12">
                                     <div class="section-form-box">
-                                        <label for="">
+                                        <label class="section-form-checkbox">
                                             <input type="checkbox" checked>
+                                            <span class="section-form-checkbox-checkmark"></span>
                                             checkbox aktivní
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="section-form-box mb-0">
-                                        <label for="">
-                                            <input type="radio">
-                                            checkbox neaktivní
                                         </label>
                                     </div>
                                 </div>
@@ -198,17 +190,29 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="section-form-box">
-                                        <label for="">
-                                            <input type="radio" checked>
-                                            checkbox aktivní
+                                        <label class="section-form-checkbox section-form-checkbox-radio">
+                                            <input type="radio" name="radio">
+                                            <span class="section-form-checkbox-checkmark"></span>
+                                            radio neaktivní
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="button-highlighted mt-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="section-form-box">
+                                        <label class="section-form-checkbox section-form-checkbox-radio">
+                                            <input type="radio" name="radio" checked>
+                                            <span class="section-form-checkbox-checkmark"></span>
+                                            radio neaktivní
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="button-highlighted mt-3 mt-md-4">
                                 Odeslat
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="11px">
-                                    <path fill-rule="evenodd"  fill="rgb(53, 160, 227)" d="M13.439,4.867 L9.190,0.621 C8.839,0.271 8.271,0.271 7.920,0.621 C7.570,0.972 7.570,1.540 7.920,1.889 L10.653,4.619 L0.896,4.619 C0.400,4.619 -0.002,5.021 -0.002,5.517 C-0.002,6.012 0.400,6.413 0.896,6.413 L10.653,6.413 L7.920,9.143 C7.570,9.493 7.570,10.062 7.920,10.411 C8.096,10.587 8.325,10.674 8.555,10.674 C8.785,10.674 9.014,10.587 9.190,10.411 L13.439,6.167 C13.618,5.987 13.705,5.751 13.701,5.517 C13.705,5.282 13.618,5.046 13.439,4.867 Z"/>   
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41px" height="9px">
+                                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M40.487,3.996 L37.059,0.574 C36.777,0.291 36.318,0.292 36.035,0.574 C35.752,0.856 35.752,1.314 36.035,1.595 L38.239,3.796 L0.722,3.796 C0.322,3.796 -0.002,4.120 -0.002,4.519 C-0.002,4.919 0.322,5.242 0.722,5.242 L38.239,5.242 L36.035,7.442 C35.752,7.725 35.752,8.183 36.035,8.465 C36.177,8.606 36.362,8.677 36.547,8.677 C36.733,8.677 36.918,8.606 37.059,8.465 L40.487,5.043 C40.631,4.898 40.701,4.709 40.698,4.519 C40.701,4.330 40.631,4.139 40.487,3.996 Z"/>
                                 </svg>
                             </a>
                         </form>

@@ -1,7 +1,11 @@
 .header {
     &-message {
+        position: relative;
         border-bottom: 1px solid var(--border-color);
-        padding: 1rem 0;
+        padding: 1rem 5rem 1rem 2rem;
+        @include media("lg") {
+            padding: 1rem 2rem 1rem 2rem;
+        }
         &-content {
             @include widthFit();
             margin: 0 auto;
@@ -14,11 +18,41 @@
                 font-size: 17px;
                 color: var(--paragraph-color);
             }
+            @include media("lg") {
+                @include flexCenterDir(column);
+            }
             @include media("md") {
                 background-position: center top;
                 padding-left: 0;
                 padding-top: 2rem;
                 text-align: center;
+            }
+        }
+        &-close {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 2rem;
+            border: 1px solid var(--border-color);
+            padding: .25rem;
+            border-radius: 50%;
+            transition-duration: 0.15s;
+            svg, path {
+                transition-duration: 0.15s;
+                fill: var(--border-color);
+            }
+            &:hover {
+                border-color: var(--highlight-color);
+                svg, path {
+                    fill: var(--highlight-color);
+                }
+            }
+            @include media("lg") {
+                position: unset;
+                width: fit-content;
+                width: -moz-fit-content;
+                transform: none;
+                margin-top: .4rem;
             }
         }
     }

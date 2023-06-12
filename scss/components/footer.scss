@@ -55,6 +55,20 @@
         }
     }
     &-icons {
+        @include min-media("md") {
+            &-right {
+                .footer-icons-box {
+                    flex-direction: row-reverse;
+                }
+                .footer-icons-content {
+                    text-align: right;
+                }
+                .footer-icons-image {
+                    margin-right: 0;
+                    margin-left: 1rem;
+                }
+            }
+        }
         &-box {
             display: flex;
             margin-bottom: 2.5rem;
@@ -85,6 +99,9 @@
                 align-items: flex-start;
                 svg {
                     margin-top: 1.25rem;
+                    @include media("md") {
+                        margin-top: 0;
+                    }
                 }
             }
             @include media("md") {

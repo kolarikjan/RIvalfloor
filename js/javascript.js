@@ -84,7 +84,7 @@ $(document).ready(function () {
         navText:["<img src='img/arrow-dropdown-black.png' alt='slider arrow' class='section-block-textimage-prev'>","<img src='img/arrow-dropdown-black.png' alt='slider arrow' class='section-block-textimage-next'>"],
         margin:24,
         nav:true,
-        dots:true
+        dots:false
     });
 
     document.querySelector('.navbar-toggler').addEventListener('click', function () {
@@ -93,14 +93,31 @@ $(document).ready(function () {
 
     });
 
+    $(".section-block-dropdowns-header").click(function (e) { 
+        e.preventDefault();
+        let body = $(this).parent();
+        if (body.hasClass("active")) {
+            body.removeClass("active");
+        }else {
+            body.addClass("active");
+        }
+    });
+    
+    $(".header-message-close").click(function (e) { 
+        e.preventDefault();
+        $(".header-message").addClass("d-none");
+    });
+
 });
 var run = false;
 $(window).scroll(function () { 
-    if (checkVisible(document.querySelector('.numbers-col-text')) && !run) {
-        run = true;
-        setTimeout(function(){
-        numbersAnimation();
-        }, );
+    if ($('.numbers-col-text').length) {
+        if (checkVisible(document.querySelector('.numbers-col-text')) && !run) {
+            run = true;
+            setTimeout(function(){
+            numbersAnimation();
+            }, );
+        }
     }
 });
 
