@@ -40,3 +40,6 @@
 .dropdown-hover:hover .dropdown-hover-menu {
     display: block !important;
 }
+.dropdown-hover:hover > a {
+    color: var(--highlight-color) !important;
+}

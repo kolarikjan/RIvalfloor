@@ -3,7 +3,7 @@
     &-row {
         max-width: 85%;
         margin: 0 auto;
-        @include media("md") {
+        @include media("xl") {
             max-width: 100%;
         }
     }
@@ -11,7 +11,7 @@
         &.bordered {
             border: 1px solid var(--border-color);
         }
-        background-color: var(--background-color);
+        background-color: var(--numbers-number-background);
         padding: 2rem;
         border-radius: var(--border-radius);
         aspect-ratio: 1/1;
@@ -28,7 +28,7 @@
             aspect-ratio: unset;
         }
         &-number {
-            color: var(--highlight-color);
+            color: var(--numbers-number-color);
             font-size: 60px;
             line-height: 80px;
             font-weight: 700;

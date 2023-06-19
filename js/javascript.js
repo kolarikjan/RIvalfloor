@@ -69,7 +69,7 @@ $(document).ready(function () {
 
     $('.section-block-textimage').owlCarousel({
         items:1,
-        loop:true,
+        loop:false,
         rewind:true,
         navText:["<img src='img/arrow-dropdown-black.png' alt='slider arrow' class='section-block-textimage-prev'>","<img src='img/arrow-dropdown-black.png' alt='slider arrow' class='section-block-textimage-next'>"],
         margin:1,

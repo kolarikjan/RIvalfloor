@@ -9,7 +9,7 @@
         @include flexCenterDir(column);
         justify-content: space-between;
         height: calc(100% - 1.4rem);
-        &:hover &-icon svg {
+        &:hover &-icon svg, &:hover &-icon img {
             animation: shake 1300ms;
         }
         @include media("lg") {
@@ -21,7 +21,7 @@
         @include media("sm") {
             padding: 3rem 2rem;
         }
-        &-icon svg {
+        &-icon svg, &-icon img {
             margin: 0 auto;
         }
         &-title {

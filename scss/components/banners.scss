@@ -146,7 +146,7 @@
     }
 }
 .banner-subpage {
-    background-image: url("../img/section-subBanner-background.png");
+    background-image: var(--header-background);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 7rem 0 4rem;

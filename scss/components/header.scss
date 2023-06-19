@@ -5,6 +5,7 @@
         padding: 1rem 5rem 1rem 2rem;
         @include media("lg") {
             padding: 1rem 2rem 1rem 2rem;
+            
         }
         &-content {
             @include widthFit();
@@ -57,14 +58,27 @@
         }
     }
     background-color: var(--background-color);
+    @include media("lg") {
+        &-logo {
+            margin-left: 1rem;
+            max-width: 50%;
+            img {
+                margin-right: 1rem;
+            }
+        }
+        .navbar-toggler {
+            margin-right: 0.8rem;
+        }
+    }
     &-nav {
         padding: 1.5rem 0;
-        @include media("xxl") {
+        @include media("xl") {
             flex-wrap: wrap;
             @include flexCenter();
         }
         @include media("lg") {
             justify-content: space-between;
+            padding: 1.5rem 0 1rem;
         }
     }
     #nav {
@@ -75,14 +89,29 @@
         .navbar-nav {
             margin: 0 0 0 auto;
             flex-wrap: wrap;
-            @include media("xxl") {
+            @include media("xl") {
                 margin: 0 auto;
             }
             @include media("lg") {
-                text-align: center;
+                & > .nav-item {
+                    border-top: 1px solid var(--border-color);
+                }
+                .dropdown-hover > a {
+                    display: flex;
+                    &::after {
+                        margin-left: auto;
+                    }
+                }
             }
         }
         .nav-item {
+            &.dropdown-hover > a::after {
+                background-image: url("../img/arrow-dropdown-black.png");
+                background-repeat: no-repeat;
+                background-position: right center;
+                content: "";
+                padding-left: 1.25rem;
+            }
             .dropdown-hover {
                 position: relative;
                 &-menu {
@@ -93,25 +122,20 @@
                     padding-top: .5rem;
                     @include media("lg") {
                         margin-left: 0;
-                        margin-bottom: .5rem;
+                        margin-bottom: .65rem;
+                        padding-top: .65rem;
+                        border-top: 1px solid var(--border-color);
                     }
                     & > div {
                         padding: 1.5rem 1.75rem;
-                        background-color: #f5f5f5;
-                        &::before {
-                            content: "";
-                            background-image: url("../img/dropdown-triangle.png");
-                            background-repeat: no-repeat;
-                            background-position: center center;
-                            width: 21px;
-                            height: 11px;
-                            position: absolute;
-                            display: block;
-                            top: -11px;
-                            left: 10px;
-                            @include media("lg") {
-                                left: 50%;
-                                transform: translateX(-50%);
+                        background-color: var(--background-color);   
+                        border: 1px solid var(--news-border-color);
+                        border-radius: var(--border-radius);
+                        @include media("lg") {
+                            padding: 0 1rem;
+                            border: 0;
+                            svg {
+                                display: none;
                             }
                         }
                     }
@@ -124,15 +148,27 @@
                     color: var(--primary-color);
                     transition-duration: 0.15s;
                     font-size: 15px;
-                    line-height: 28px;
+                    line-height: 30px;
                     letter-spacing: 0.025rem;
                     font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    min-width: 275px;
+                    svg {
+                        fill: var(--highlight-color);
+                        path {
+                            fill: var(--highlight-color);
+                        }
+                        margin-right: .75rem;
+                    }
                     &:hover {
                         color: var(--highlight-color);
                         text-decoration: none;
                     }
                     @include media("lg") {
-                        line-height: 32px;
+                        line-height: 30px;
+                        font-weight: 400;
+                        min-width: unset;
                     }
                 }     
             }
@@ -145,7 +181,8 @@
                 position: relative;
                 @include media("lg") {
                     margin-right: 0;
-                    padding: 0.4rem 0;
+                    padding: 0.65rem 1rem;
+                    font-size: 15px;
                 }
                 &::before{
                     content: "";
@@ -169,8 +206,12 @@
             &.active .nav-link, .nav-link:hover {
                 color: var(--highlight-color);
             }
+            @include media("md") {
+                width: 100%;
+                margin: 0 auto;
+            }
         }
-        @include media("xxl") {
+        @include media("xl") {
             padding-left: 0rem;
             padding: 0.75rem 0;
             width: 100%;
@@ -185,6 +226,9 @@
         flex-shrink: 0;
         margin-right: -0.5rem;
         @include media("xxl") {
+            margin-left: 1.5rem;
+        }
+        @include media("xl") {
             margin-left: 0;
         }
         a {
@@ -196,7 +240,7 @@
             font-size: 17px;
             border-radius: var(--border-radius);
             @include media("lg") {
-                margin: .5rem 0 0 0;
+                margin: 1.5rem 0 0 0;
                 padding: 0;
             }
             transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -221,6 +265,8 @@
     
     .navbar-toggler {
         padding-right: 0;
+        padding-top: 0;
+        margin-top: -0.25rem;
     }
     .animated-icon {
         width: 30px;
