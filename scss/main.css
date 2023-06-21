@@ -806,6 +806,7 @@ input, textarea {
 }
 .services-box-icon svg, .services-box-icon img {
   margin: 0 auto;
+  max-height: 68px;
 }
 .services-box-title {
   font-size: 25px;
