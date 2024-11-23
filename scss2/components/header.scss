@@ -38,13 +38,11 @@
             padding: .25rem;
             border-radius: 50%;
             transition-duration: 0.15s;
-            filter: brightness(.75);
             svg, path {
                 transition-duration: 0.15s;
                 fill: var(--border-color);
             }
             &:hover {
-                filter: none;
                 border-color: var(--highlight-color);
                 svg, path {
                     fill: var(--highlight-color);
